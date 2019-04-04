@@ -3,6 +3,8 @@
 @section('titulo','Nutriólogo')
 @section('subtitulo','Asignar Dieta')
 @section('contenido')
+
+<form method="POST" action="{{route('dietas.store')}}">
 <div class="row">
     <div class="col-md-12">
         <div class="box">
@@ -20,6 +22,9 @@
                     <label>Semana</label>
                     <input type="date" name="semana" class="form-control" required>
                     <small class="form-text text-muted">Elige solo días lunes</small>
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary" type="submit">Asignar Dieta</button>
                 </div>
             </div>
         </div>
@@ -230,4 +235,6 @@
         </div>
     </div>
 </div>
+</form>
+
 @endsection
